@@ -1,0 +1,37 @@
+{
+  "id": "bitwarden-provider",
+  "name": "Bitwarden Provider",
+  "version": "0.1.0",
+  "description": "Search Bitwarden vault entries from the launcher through rbw",
+  "tags": ["Launcher", "Productivity", "Security"],
+  "minNoctaliaVersion": "4.5.0",
+  "author": "Noctalia Community",
+  "official": false,
+  "license": "MIT",
+  "repository": "https://github.com/noctalia-dev/noctalia-plugins",
+  "entryPoints": {
+    "main": "Main.qml",
+    "launcherProvider": "LauncherProvider.qml",
+    "settings": "Settings.qml"
+  },
+  "dependencies": {
+    "plugins": []
+  },
+  "metadata": {
+    "commandPrefix": "bw",
+    "defaultSettings": {
+      "rbwCommand": "rbw",
+      "profile": "",
+      "baseUrl": "",
+      "identityUrl": "",
+      "email": "",
+      "pinentry": "",
+      "lockTimeout": "",
+      "syncInterval": "",
+      "autoApplyConfig": true,
+      "includeInSearch": false,
+      "copyField": "password",
+      "maxResults": 50
+    }
+  }
+}

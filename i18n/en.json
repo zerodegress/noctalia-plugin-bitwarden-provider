@@ -1,0 +1,98 @@
+{
+  "categories": {
+    "all": "All",
+    "password": "Password",
+    "username": "Username",
+    "totp": "TOTP",
+    "notes": "Notes"
+  },
+  "settings": {
+    "rbwCommand": {
+      "label": "rbw command",
+      "description": "Executable to run, for example `rbw` or an absolute path."
+    },
+    "profile": {
+      "label": "Profile",
+      "description": "Optional RBW_PROFILE name. Leave empty to use rbw's default profile."
+    },
+    "email": {
+      "label": "Email",
+      "description": "Bitwarden account email for rbw login. Leave empty to keep the current rbw setting."
+    },
+    "baseUrl": {
+      "label": "Base URL",
+      "description": "Bitwarden API endpoint. Use this for self-hosted Bitwarden or Vaultwarden."
+    },
+    "identityUrl": {
+      "label": "Identity URL",
+      "description": "Optional identity endpoint. Usually empty unless your server uses a custom identity URL."
+    },
+    "autoApplyConfig": {
+      "label": "Apply rbw config on use",
+      "description": "Before launcher actions, write the non-empty endpoint and account settings to rbw."
+    },
+    "includeInSearch": {
+      "label": "Include in main search",
+      "description": "When enabled, Bitwarden results can appear outside the >bw command after the vault has been loaded."
+    },
+    "copyField": {
+      "label": "Default copied field",
+      "description": "Field copied when the All tab is selected. Common values: password, username, totp, notes."
+    },
+    "maxResults": {
+      "label": "Max results",
+      "description": "Maximum number of vault entries shown in the launcher."
+    },
+    "lockTimeout": {
+      "label": "Lock timeout",
+      "description": "Seconds rbw keeps keys in memory. Leave empty to keep the current rbw setting."
+    },
+    "syncInterval": {
+      "label": "Sync interval",
+      "description": "Seconds between rbw background syncs. Use 0 to disable rbw's automatic sync."
+    },
+    "pinentry": {
+      "label": "Pinentry command",
+      "description": "Program rbw uses for password prompts, for example `pinentry-qt`."
+    }
+  },
+  "launcher": {
+    "title": "Bitwarden",
+    "description": "Search Bitwarden vault entries through rbw",
+    "checking": {
+      "title": "Checking Bitwarden lock state...",
+      "description": "This does not prompt for your master password."
+    },
+    "loading": {
+      "title": "Loading Bitwarden...",
+      "description": "rbw is listing vault entries."
+    },
+    "initial": {
+      "title": "Load Bitwarden entries",
+      "description": "Runs rbw only now, so Noctalia startup does not unlock your vault."
+    },
+    "error": {
+      "title": "Bitwarden unavailable",
+      "description": "Check rbw, profile, endpoint, and pinentry settings."
+    },
+    "action": {
+      "copied": "Copied to clipboard",
+      "error": "rbw command failed"
+    },
+    "unlock": {
+      "title": "Unlock Bitwarden",
+      "description": "Close the launcher and show the rbw password prompt",
+      "started": "Unlock prompt opened"
+    },
+    "sync": {
+      "title": "Sync Bitwarden vault",
+      "description": "Run rbw sync for the configured profile",
+      "done": "Sync completed"
+    },
+    "lock": {
+      "title": "Lock Bitwarden vault",
+      "description": "Run rbw lock for the configured profile",
+      "done": "Vault locked"
+    }
+  }
+}
